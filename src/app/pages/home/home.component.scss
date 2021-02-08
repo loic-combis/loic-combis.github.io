@@ -1,11 +1,11 @@
 .home {
     min-height: var(--available-space);
 
-    &--header {
+    &__header {
         padding-top: var(--header-total);
-        background: url('/assets/images/bubble.jpg') no-repeat;
-        object-fit: cover;
-        background-position: 50% 0%;
+        background: url('/assets/images/railway.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
         min-height: 60vh;
     }
 

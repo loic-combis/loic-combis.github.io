@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -9,18 +9,11 @@ import { Title } from '@angular/platform-browser';
 })
 export class HomeComponent implements OnInit {
 
-  private loading: boolean = false;
-
-  constructor(private titleService: Title, private cdr: ChangeDetectorRef) { }
+  constructor(private titleService: Title, private metaService: Meta) { }
 
   ngOnInit() {
-    this.loading = true;
     this.titleService.setTitle('Home | Loïc Combis');
-
-    setTimeout(() =>  {
-      this.loading = false;
-      this.cdr.detectChanges();
-    }, 1000);
+    this.metaService.updateTag({ name: 'description', content: 'Welcome to Loïc Combis personal website. Find out about his education, his career and hobbies!' })
   }
 
 }

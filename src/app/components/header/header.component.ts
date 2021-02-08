@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(private cdr: ChangeDetectorRef) {}
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll')
   onScroll() {
     if (window.pageYOffset >= 100) {
       this.headerTop = 0;
