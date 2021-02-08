@@ -1,0 +1,35 @@
+
+@import 'abstracts';
+
+.header {
+    width: 100%;
+    height: var(--header-height);
+    position: fixed;
+    z-index:999;
+
+    transition: box-shadow $timing-normal;
+
+    &--shadow {
+        box-shadow: $elevation-toast;
+    }
+
+    &__rhs {
+        a, button {
+            transition: all $timing-normal;
+        }
+
+        a {
+            &:hover {
+                color: darken($papaya, 10%) !important;
+            }
+        }
+
+        button {
+            border-radius: 10000rem;
+            
+            &:hover {
+                background-color: darken($papaya, 10%) !important;
+            }
+        }
+    }
+}

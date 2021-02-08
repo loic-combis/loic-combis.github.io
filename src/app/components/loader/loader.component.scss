@@ -1,0 +1,91 @@
+@import 'abstracts';
+
+$dimension: 30px;
+$shapeDimension: 10px;
+
+// custom translation for each shape in an animation
+@mixin customTranslate($shape, $tx, $ty) {
+  @if $shape == 1 {
+    transform: translate($tx, $ty);
+  } @else if $shape == 2 {
+    transform: translate(-$ty, $tx);
+  } @else if $shape == 3 {
+    transform: translate($ty, -$tx);
+  } @else if $shape == 4 {
+    transform: translate(-$tx, -$ty);
+  }
+}
+
+.loader {
+  width: $dimension;
+  height: $dimension;
+  position: relative;
+
+  animation: rotation $timing-xslow infinite;
+
+  &__shape {
+    position: absolute;
+    width: $shapeDimension;
+    height: $shapeDimension;
+    border-radius: $radius-sm;
+
+    &--1 {
+      left: 0;
+    }
+    &--2 {
+      right: 0;
+    }
+    &--3 {
+      bottom: 0;
+    }
+    &--4 {
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+@for $j from 1 through 4 {
+  $duration: 0.5s;
+  $timing: ease;
+  $delay: 0s;
+  $direction: alternate;
+
+  $a: 18px;
+  $timing: linear;
+  $duration: 2s;
+  $direction: normal;
+
+  .loader__shape--#{$j} {
+    animation: shape-animation-#{$j}
+      $duration
+      $timing
+      $delay
+      infinite
+      $direction;
+  }
+
+  @keyframes shape-animation-#{$j} {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      @include customTranslate($j, 0, $a);
+    }
+    50% {
+      @include customTranslate($j, $a, $a);
+    }
+    75% {
+      @include customTranslate($j, $a, 0);
+    }
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

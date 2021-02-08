@@ -1,0 +1,20 @@
+// Media Queries
+@mixin breakpoint($device) {
+  @if $device == tablet {
+    @media only screen and(min-width: 768px) {
+      @content;
+    } // iPad
+  }
+
+  @if $device == desktop {
+    @media only screen and (min-width: 1025px) {
+      @content;
+    } // > iPad Pro
+  }
+
+  @if $device == desktop-l {
+    @media only screen and (min-width: 1750px) {
+      @content;
+    }
+  }
+}

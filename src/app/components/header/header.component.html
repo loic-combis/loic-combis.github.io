@@ -1,0 +1,35 @@
+<header 
+    class="header u-bg-white u-row u-center u-space-between u-p-h-4x"
+    [class.header--shadow]="headerTop === 0"
+    [style.top.px]="headerTop">
+    <a 
+        routerLink="/"
+        class="header__lhs">
+        <img 
+            src="assets/images/bitmojis/wave.png"
+            alt="hello avatar"
+            height="70"
+            width="70"/>
+    </a>
+    <nav class="header__rhs u-row u-center">
+        <a
+            routerLink="/"
+            class="t-subhead u-papaya u-p-v-base u-p-h-3x">
+            🌍<span class="u-m-l-half">Adventures</span>
+        </a>
+        <a
+            routerLink="/"
+            class="t-subhead u-papaya u-p-v-base u-p-h-3x">
+            🔭<span class="u-m-l-half">Science</span>
+        </a>
+        <a 
+            routerLink="/"
+            class="t-subhead u-papaya u-p-v-base u-p-h-3x">
+            🖋<span class="u-m-l-half">Writing</span>
+        </a>
+        <button 
+            class="t-subhead u-bg-papaya u-white u-p-v-base u-p-h-3x">
+            ＠ Contact
+        </button>
+    </nav>
+</header>

@@ -25,11 +25,20 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "src/assets/",
+                "output": "./assets"
+              }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/scss/abstracts/abstracts.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/assets/scss/abstracts"]
+            },
             "scripts": []
           },
           "configurations": {

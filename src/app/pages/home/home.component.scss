@@ -1,0 +1,15 @@
+.home {
+    min-height: var(--available-space);
+
+    &--header {
+        padding-top: var(--header-total);
+        background: url('/assets/images/bubble.jpg') no-repeat;
+        object-fit: cover;
+        background-position: 50% 0%;
+        min-height: 60vh;
+    }
+
+    &__section {
+        min-height: 500px;
+    }
+}
