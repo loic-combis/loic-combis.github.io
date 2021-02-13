@@ -1,26 +1,9 @@
 @font-face {
-  font-family: 'Averta';
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: url('/assets/fonts/averta-regular.woff2') format('woff2'),
-    url('/assets/fonts/averta-regular.woff') format('woff');
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype'),
 }
 
 @font-face {
-  font-family: 'Averta';
-  font-style: normal;
-  font-weight: bold;
-  font-display: swap;
-  src: url('/assets/fonts/averta-bold.woff2') format('woff2'),
-    url('/assets/fonts/averta-bold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Schnyder';
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: url('/assets/fonts/schnyder-regular.woff2') format('woff2'),
-    url('/assets/fonts/schnyder-regular.woff') format('woff');
+  font-family: 'Montserrat Alternates';
+  src: url('/assets/fonts/Montserrat_Alternates/MontserratAlternates-Regular.ttf') format('truetype'),
 }

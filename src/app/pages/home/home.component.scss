@@ -1,25 +1,27 @@
 @import 'abstracts';
 
 .home {
-    min-height: var(--available-space);
+    height: 100vh;
 
-    &__header {
-        padding-top: var(--header-total);
-        background: url('/assets/images/railway.jpg') no-repeat;
-        background-size: cover;
-        background-position: center;
-        min-height: 60vh;
-
-        align-items: center;
-
-        h1 {
-            min-width: auto;
-            width: 50%;
-            text-align: center;
-        }
+    &__lhs, &__rhs {
+        flex: 1;
+        position: relative;
+        height: 100%;
     }
 
-    &__section {
-        min-height: 500px;
+    canvas, &__content {
+        position: absolute;
+        top:0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    canvas { 
+        z-index: -1;
+    }
+
+    &__content {
+        z-index: 10;
     }
 }

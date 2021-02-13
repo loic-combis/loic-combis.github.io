@@ -1,15 +1,1 @@
-:root {
-    --header-space: 100px;
-    --header-height: 80px;
-    --available-space: calc(100vh - 180px);
-    --header-total: 180px;
-  }
-  
-.page {
-    width: 100%;
-    margin: 0;
-    padding-top: calc(#{var(--header-space)} + #{var(--header-height)});
-    min-height: var(--available-space);
-}
-
 @import './assets/scss/shared';
